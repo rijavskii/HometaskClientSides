@@ -22,6 +22,7 @@ module.exports = function(action){
 
     function deleteUser() {
 
+        console.log(this);
         let id = this.getAttribute('id');
         // console.log(this.parentNode.parentNode.parentNode.childNodes[3].childNodes[0].nodeValue);
         console.log(id);
@@ -40,7 +41,7 @@ module.exports = function(action){
 
     function updateUser(){
         let changeNameForm = '<td>'+
-            '<form action="" class="form-inline"  onsubmit="return false">'+
+            '<form action="" class="form-inline">'+
                 '<div class="form-group">'+
                     '<label for="updateName" class="sr-only">Имя</label>' +
                     '<input class="form-control" type="text" value="Вася">' +
