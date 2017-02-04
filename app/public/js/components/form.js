@@ -44,10 +44,10 @@ module.exports = function(action){
             '<form action="" class="form-inline">'+
                 '<div class="form-group">'+
                     '<label for="updateName" class="sr-only">Имя</label>' +
-                    '<input class="form-control" type="text" value="Вася">' +
+                    '<input class="form-control" type="text" placeholder="Вася">' +
                 '</div>'+
                 '&nbsp;'+
-                '<button class="changeName" class="btn btn-primary">Изменить</button>' +
+                '<button type="submit" class="changeName" class="btn btn-primary">Изменить</button>' +
             '</form>'+
             '</td>';
         this.parentNode.parentNode.insertAdjacentHTML('beforeEnd', changeNameForm);
@@ -63,7 +63,8 @@ module.exports = function(action){
     };
 
     function changeNameUser(){
-        let newName = this.parentNode.childNodes[0].childNodes[1].getAttribute('value');
+        let newName = this.parentNode.childNodes[0].childNodes[1].value;
+        console.log(newName, "Put user")
         let id = this.parentNode.parentNode.parentNode.childNodes[0].innerText;
         let oldName = this.parentNode.parentNode.parentNode.childNodes[1].innerText;
 
@@ -81,11 +82,11 @@ module.exports = function(action){
             let updateDeleteHtml = '<a class="delete" id='+id+' href="#delete">Удалить</a> | ' +
                 '<a class="update" href="#update">Изменить</a>' +
                 '</td>';
-
+            location.reload();
             console.log(this.parentNode.parentNode.parentNode.childNodes[1].innerTex = newName);
-            this.parentNode.parentNode.parentNode.childNodes[2].remove();
+            //this.parentNode.parentNode.parentNode.childNodes[2].remove();
             console.log(this.parentNode.parentNode.childNodes[0]);
-            this.parentNode.parentNode.parentNode.insertAdjacentHTML('beforeEnd', newUserRow(updateDeleteHtml));
+            //this.parentNode.parentNode.parentNode.insertAdjacentHTML('beforeEnd', newUserRow(updateDeleteHtml));
 
         })
     }

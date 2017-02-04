@@ -3,12 +3,8 @@
   null,
   null,
   null,
-  {
-    "name": "Вася"
-  },
-  {
-    "name": "Petr"
-  },
+  null,
+  null,
   {
     "name": "olga"
   },
@@ -25,5 +21,8 @@
   null,
   {
     "name": "olga"
+  },
+  {
+    "name": "Fedia"
   }
 ]
